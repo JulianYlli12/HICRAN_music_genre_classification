@@ -1,0 +1,203 @@
+\documentclass[a4paper, 11pt]{report}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{apacite}
+\usepackage{graphicx}
+\usepackage[capposition=top]{floatrow}
+\usepackage{subcaption}
+\usepackage{amsmath,bm}
+\begin{document}
+\chapter{Literature Survey}
+\section{Music Features} 
+Available music clips usually have a sampling rate about 22050 or 44100 Hz. Using all the samples without processing in Content-Based Music Information Retrieval tasks is not time and memory efficient. \cite{review}. To solve this problem, a number of features which integrates information in music recordings can be extracted to simplify the work. 
+\subsection{Feature Taxonomy}
+An paper in 2006 summarized music's audio features in three categories: timbre, melody and rhythm. It also  \cite{featuresummary} This work is significant because it established the framework in feature extraction which is still followed by recent researchers. \\
+ Based on this summary,  \cite{fu2010survey} further categorized timbre and temporal features as low-level features which can be easily extracted after framing and Fourier Transformation, while rhythm, pitch and harmony are as mid-level features which can describe the intrinsic characteristics of music. This paper is important because it explained all features' roles as descriptors, whether they resemble information in a long period or a time frame and, whether they contain more intuitive properties. Table~\ref{tbl:feature taxonomy} in this paper summarized widely used low-level features.\\
+\begin{table}[h]
+	\caption{Common low-level features  from \protect\citeA{fu2010survey}}
+	\centering
+	\includegraphics[scale = 0.4]{images/common_features.png}
+	\label{tbl:feature taxonomy}
+\end{table}\\
+Also, a number of researches proposed new features or mothods to learn features. For example, OSCCs are able to differentiate instrumental sound from voices\cite{maddage2004singer}, which can help to classify classical, ambient music from pop and jazz.  At 2011, Costa suggests extracting features from spectrograms, the visual presentation of an audio and finally improved the classification accuracy\cite{histogram}. This work is vital because it casts a new light to apply algorithms in image processing on audio processing. At 2014, Huang et al use adaptive harmony selection algorithm to search more relevant features, this method halves the dimensionality, combined with ensemble classifier which contains binary SVM classifiers for each pair of genres\cite{huang2014music}. Their work reaches 97.2\% accuracy and is considered as the state-of-art approch.
+\subsection{Log-amplitude Mel-spectrogram}
+As a visual representation of audio clip, spectrograms  shows how energy of each frequency changes over time. It is an extensively used feature to measure timbre in voiceprint recognition, instrument recognition and music classification tasks. 
+ \begin{figure}[h]
+ 	\caption{Fourier transformation on waveform frames from \protect\citeA[p.~54]{muller2015fundamentals}}
+ 	\centering
+ 	\includegraphics[scale = 0.5]{images/wave_stft.png}
+ 	\label{fig:wave_stft}
+ \end{figure}\\
+The first step is to split the signal into equally long parts. In Figure ~\ref{fig:wave_stft}, (a) is the the original audio. Left figures in (b) (c) and (d) are the windowed waveform which is the visual representation of audio on time domain. These segments can be partially overlapped to each other.\\
+The second step is to convert waveforms to spectrums which is frequency domain representation. It can be done with discrete short-time Fourier Transformation (STFT) on each subsignal $x$. The $k^{\mathrm{th}}$ Fourier coefficient of the $m^{\mathrm{th}}$ window, i.e. each element in metrix $\mathcal{X}$ is given by:
+$$\mathcal{X}(m, k) :=\sum_{n=0}^{N-1} x(n+m H) w(n) \exp (-2 \pi i k n / N)$$
+By square every Fourier coefficients, the spectrogram can be computed:
+$$\mathcal{Y}(m, k) :=|\mathcal{X}(m, k)|^{2}$$
+ \begin{figure}[h]
+ 	\caption{Convert waveform to Spectrogram from \protect\citeA[p.~56]{muller2015fundamentals} }
+ 	\centering
+ 	\includegraphics{images/wave_spec.png}
+ 	\label{fig:wave_spec}
+ \end{figure}\\
+ Fig~\ref{fig:wave_spec} shows the waveform of an audio clip and its correspondent spectrogram. The horizontal axis represents  time positions while the vertical axis represents frequencies. The shaded part means the squared coefficients and in this example darker pixles imply higher amplitudes.\\
+Mel-scale, a psycho-acoustic concept is widely introduced in audio processing to measure frequency. The idea is that human's perception of sound is nonlinear and a same frequency gap in hertz can be less noticable at high pitch \cite{PhysRevLett.110.044301}. By scaling the $y$-axis in mel-scale, the mel-spectrogram can describe how amplitude changes over time and frequency from human hearing's perspective. The formula to convert hertz-scale to mel-scale is given as
+$$m=2595 \log _{10}\left(1+\frac{f}{700}\right)$$
+\subsection{Chromagram}
+Chromagram, a middle-level pitch representation, is robust to different timbres of various instruments. It is calculated based on the spectrogram mentioned above. It is extensively used in MIR tasks like music synchronization and chord recognition.
+ \begin{figure}[h]
+ 	\caption{Convert spectrogram to chromagram from \protect\citeA[p.~119]{muller2015fundamentals} }
+ 	\centering
+ 	\includegraphics[scale=0.5]{images/chroma.png}
+ 	\label{fig:chroma}
+ \end{figure}\\
+ In order to convert spectrogram (b) to chromagram (d) in Fig~\ref{fig:chroma}, firstly convert it to log-frequency spectrogram (c) using logarithmic scale to make the frequency depends on music notes which are linearly distributed. Then assign the signal into 12 equal temperaments which is
+$$\{C, C^\sharp, D, D^\sharp, E ,F, F^\sharp, G, G^\sharp, A, A^\sharp, B\}$$
+irrespective to the octave, $C_{0}, C_{2}, C_{4}$ will all be aggregated as $C$.
+\section{Deep learning}
+Deep learning is a cutting-edge subfield of machine learning using models called Artificial Neural Networks (ANN) whose structures are inspired by human's brain. Fig~\ref{fig:ann} shows the the most common ANN structure which starts with an input layer, with least one hidden layer followed by and end up with an output layer.
+ \begin{figure}[h]
+ 	\caption{A basic ANN model }
+ 	\centering
+ 	\includegraphics[scale=0.3]{images/ANN.jpeg}
+ 	\label{fig:ann}
+ 	\floatfoot{http://cs231n.github.io/neural-networks-1}
+ \end{figure}\\
+\subsection{Activation Functions}
+In ANN an activation function take the output of a node as input, and it's output will be feed forward to the next layer. It decides how a cell is fired or activated with respective to its value. Activation functions can't be linear functions in order to solve nonlinear problems. 
+\begin{figure}[h]
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[scale=0.66]{images/relu.png}
+  \caption{ReLU}
+  \label{fig:relu}
+  {$f(x)=0$}
+\end{subfigure}%
+\begin{subfigure}{.34\textwidth}
+  \centering
+  \includegraphics[scale=0.7]{images/lelu.png}
+  \caption{leaky ReLU}
+  {$f(x)=\alpha x$}
+  \label{fig:lelu}
+\end{subfigure}%
+\begin{subfigure}{.33\textwidth}
+  \centering
+  \includegraphics[scale=0.7]{images/elu.png}
+  \caption{ELU}
+  {$f(x)=\alpha(\exp (x)-1)$}
+  \label{fig:elu}
+\end{subfigure}
+\caption{ReLU, leaky ReLU and ELU}
+\label{fig:reluelu}
+\floatfoot{http://cs231n.stanford.edu/slides/2017/cs231n\_2017\_lecture6.pdf}
+\end{figure}\\
+Fig ~\ref{fig:reluelu} shows the linear unit family and their output when $x<0$. A popular example is ReLU(rectified linear unit) which takes the maximun between input and 0 as the output. However, an problem of ReLU is killing neuron, cause weights never update again because of 0 gradient when $x<0$. As an alternative, leaky ReLU solved this problem by giving a tiny weight when $x<0$ rather than simply set to 0. However, leaky ReLU's linearity makes it lag behind nonlinear functions in complex problems. As a powerful alternative of ReLU, ELU slowly smoothes when the input is negative. Its nonlinearity makes it able to solve nonlinear problems like music genre classification.
+\subsection{Convolutional Neural Network}
+CNN(Convolutional Neural Network) is a network structure which do computation specifically on grid-like data types which includes images or time series. Convolutional network mainly consists three parts, convolution layer, activation function and pooling layer.
+\begin{figure}[h]
+ 	\caption{Convolutional network structure \protect\citeA{deeplearning}}
+ 	\centering
+ 	\includegraphics[scale=0.5]{images/cnn_struct.png}
+ 	\label{fig:cnn_struct}
+ \end{figure}\\
+ \subsubsection{Convolutional Layer}
+Fig~\ref{fig:conv} and the equation below shows that convolutional operation is applying a filter named kernel $K$ on input grid data $I$, and then sum their element-wise product as the element on the output $S$.
+$$S(i, j)=(I * K)(i, j)=\sum_{m} \sum_{n} I(i+m, j+n) K(m, n)$$
+ \begin{figure}[h]
+ 	\caption{Converlutional operation from \protect\citeA{deeplearning}}
+ 	\centering
+ 	\includegraphics[scale=0.5]{images/conv.png}
+ 	\label{fig:conv}
+ \end{figure}\\
+\subsubsection{Pooling Layer}
+Another important operation in CNN is Pooling which is designed to compress the grid-like data after applying convolution operation and activation functions to simplify the model to avoid overfitting and accelerate learning parameters by aggregating values in a pooling window using their maximum or average. Fig~\ref{fig:pool} illustrates the max pooling operation.
+ \begin{figure}[h]
+ 	\caption{Max pooling}
+ 	\centering
+ 	\includegraphics[scale=1]{images/pooling.png}
+ 	\label{fig:pool}
+ 	\floatfoot{https://computersciencewiki.org/index.php/Max-pooling\_/\_Pooling}
+ \end{figure}\\
+ \subsubsection{Inception Module}
+Inception module is proposed in 2014 as the core component of GoogLeNet, which achieved a dominant position in ILSVRC14 \cite{szegedy2015going}. This module can effectively avoid the waste of computation resources as the computation increase exponentially when the number of kernels increased in each of serially connected convolutional layers. Fig ~\ref{fig:inception}(a) is the naive version of Inception module which does convolution operations with three different sizes of kernels and max pooling parallelly to extract higher and lower level features and then concatenate them together. Fig ~\ref{fig:inception}(b) makes use of 1x1 convolution which can not only enable the model to be wider and deeper by reducing the dimension of input before expensive 3x3 and 5x5 convolutions but also address overfitting by simplifying the model, reducing the number of parameters.
+ \begin{figure}[h]
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{images/naive_inception.png}
+  \label{fig:naive}
+\end{subfigure}%
+\begin{subfigure}{.5\textwidth}
+  \centering
+  \includegraphics[scale=0.5]{images/dr_inception.png}
+  \label{fig:dr}
+\end{subfigure}
+\caption{Inception Module from \protect\citeA{szegedy2015going}}
+\label{fig:inception}
+\end{figure}\\
+\subsection{Recurrent Neural Network}
+RNN is a network structure which takes sequence-like data $x^{(1)}, \ldots, x^{(\tau)}$ includes videos, audios and sentences as inputs. The recurrence formula applied on every vectors in the sequence shows that parameters of each time step are shared, so there's no predetermined limit on the input size. 
+$$h_{n}=\sigma\left(\mathbf{W}_h h_{n-1}+\mathbf{W}_x x_{n}\right)$$
+ \begin{figure}[h]
+ 	\caption{Recurrent Neural Network}
+ 	\centering
+ 	\includegraphics[scale=0.35]{images/rnn.png}
+ 	\label{fig:rnn}
+ 	\floatfoot{https://towardsdatascience.com/recurrent-neural-networks-d4642c9bc7ce}
+ \end{figure}\\
+The Fig~\ref{fig:rnn} gives the structure of Vanilla RNN. Every hidden states $h$ depend not just on memory until the previous input$h_{n-1}$ but also the current input $x_{n}$ while generating outputs$y_{n}$. However, Vanilla RNN sufffers from vanishing gradients which can cause network forget earlier inputs when the sequence is relatively long.\\
+\subsubsection{Gated Recurrent Unit}
+As a strong alternative, GRU(Gated Recurrent Unit) is designed to solve the shrinking memory problem by using gates to control which information to keep or forget. The structure of GRU shown in Fig~\ref{fig:gru} contains Reset gate.\\
+$$
+\begin{array}{l}{\mathbf{R}_{t}=\sigma\left(\mathbf{X}_{t} \mathbf{W}_{x r}+\mathbf{H}_{t-1} \mathbf{W}_{h r}+\mathbf{b}_{r}\right)} \\ {\mathbf{Z}_{t}=\sigma\left(\mathbf{X}_{t} \mathbf{W}_{x z}+\mathbf{H}_{t-1} \mathbf{W}_{h z}+\mathbf{b}_{z}\right)}\end{array}
+$$
+By taking current input $\mathbf{X}_{t}$ and last moment's hidden state $\mathbf{H}_{t-1}$ as inputs, $\mathbf{R}_{t}$ and $\mathbf{Z}_{t}$ can be calculated with different weights. Then the candidate hidden state can be calculated by taking the Hardmard product of $\mathbf{R}_{t}$ and $\mathbf{H}_{t-1}$, a larger $\mathbf{R}_{t}$ means the Reset gate keeps more memory.
+$$
+\tilde{\mathbf{H}}_{t}=\tanh \left(\mathbf{X}_{t} \mathbf{W}_{x h}+\left(\mathbf{R}_{t} \odot \mathbf{H}_{t-1}\right) \mathbf{W}_{h h}+\mathbf{b}_{h}\right)
+$$
+Then the hidden state can be calculated by the following equation in which if more memory are kept then more information of the current input will be forgotten.
+$$\boldsymbol{H}_{t}=\mathbf{Z}_{t} \odot \boldsymbol{H}_{t-1}+\left(1-\mathbf{Z}_{t}\right) \odot \tilde{\boldsymbol{H}}_{t}$$
+\begin{figure}[h]
+ 	\caption{Gated Recurrent Unit}
+ 	\centering
+ 	\includegraphics[scale=0.5]{images/gru.png}
+ 	\label{fig:gru}
+ 	\floatfoot{https://d2l.ai/chapter\_recurrent-neural-networks/gru.html}
+ \end{figure}\\
+ \subsubsection{Bidirectional RNN}
+Bidirectional RNN can include information from unseen timesteps by splitting RNN units into forward and backward directions. It helps RNN adapt to more domains which need contextual data such as speech recognition, handwritting recognition and bioinformatics. 
+\begin{figure}[h]
+ 	\caption{Bidirectional RNN}
+ 	\centering
+ 	\includegraphics[scale=0.35]{images/birnn.png}
+ 	\label{fig:birnn}
+ 	\floatfoot{https://en.wikipedia.org/wiki/Bidirectional\_recurrent\_neural\_networks}
+ \end{figure}\\
+\section{The Task: Genre Classification} 
+Genre classification is a core task in music information retrieval (MIR). The goal is to classify and annotate a music clip to its most relevant genre like jazz, ambient, pop and so on or a subgenre like tango and post-rock. Three areas in this task are studied intensively, music features extraction, classification algorithm and the taxonomy of music genres.
+\subsection{Traditional Machine Learning Solutions}
+The earliest and most influential genre classification is George Tzanetakis work in 2002 \cite{tzanetakis2002musical}. GTZAN, the dataset they provided is widely recognized as one of the benchmarks for the genre classification task. It's a significant work because firstly, it innovatively proposed three sets of features: timbre, rhythm and pitch, which is a prototype of today's feature framework. Secondly, it trains several statistical pattern recognition classifiers includes Gaussian, GMM and KNN and compares their performances. Also, for those short-term a.k.a window-based features, it gives the effect of window size on the performance. All of those are vital parts in classification tasks.\\
+ However, George's work used 30 seconds of clips which may not be feasible and time-efficient. For the length of the segment, a research at 2006 suggests 2-5 seconds audio provides sufficient information for classification\cite{bergstra2006aggregate}. This work uses Adaboost, fits each feature with gaussian then use mean and variance of to feed the classifier and eventually get a 82\% accuracy.
+ \subsection{Deep Learning Solutions}
+Nevertheless, all the works mentioned above use the means and variances of short-term features in every window as descriptors, which means the relative position of each window is ignored. In spite of that, conventional machine learning algorithms depends on feature engineering, but deep learning can solve it\cite{deeplearning}. In this decade, more researches make utility of deep neural networks. In 2010, it was the first time that convolutional neural network is applied on genre classification task\cite{klc2}. This work is innovative because it provides the idea that using a CNN classifier on a matrix of MFCCs whose height is the number of windows while the width is the number of MFCCs in each window. However, this model is severely overfitted because of the absence of other features bottlenecked the performance. RNN can also be used exclusively to classify genres. In 2018, Tang et al. proposed a hierarchical LSTM RNN\cite{tang2018music} which first classify "strong" and "mild", then do sub-classification to predict which specific genre it is in all "strong" genres (pop, rock, rap and so on). This model is novel and explainable, but the performance is not decent because they use MFCCs as the only feature.\\
+ \begin{figure}[h]
+	\caption{CRNN by Keunwoo Choi}
+	\centering
+	\includegraphics{images/CRNN.png}
+	\label{fig:choi's CRNN}
+\end{figure}\\
+Doing image classification on spectrograms is another promising trend. After Costa suggests extracting features from spectrograms in 2011. He introduces ideas like LBP(local binary patterns), Garbor filter and LPQ come from computer vision area to classify spectrograms\cite{costa2012music}\cite{costa2013music} and get accuracy higher than 80\%. Based on these researches, in 2016, Loris et al proposed a pipeline (see Figure  ~\ref{fig:fusion pipeline}) which can resemble features and fusion classifiers. Their experiment proves that fusion classifier overperforms single classifier \cite{nanni2016combining}. In 2015, Piczak et al apply CNN to classify environment sounds' spectrograms \cite{ piczak2015environmental}, this work is influential and inspires similar approaches on music genre classification. In 2017 Keunwoo Choi applied the CNN model but use log-amplitude mel-spectrograms as input alternatively and find the accuracy is lifted significantly, he also combines the CNN model and RNN which aggregate temporal features to further imporve the performance(see Figure ~\ref{fig:choi's CRNN}).  In 2018 an experiment shows that the spectrogram classification method outperformes handcraft features classification on GTZAN dataset\cite{bahuleyan2018music}.
+ \begin{figure}[h]
+ 	\caption{pipeline for combine visual features}
+ 	\centering
+ 	\includegraphics[scale = 0.5]{images/fusion_classifier.png}
+ 	\label{fig:fusion pipeline}
+ \end{figure}
+\section{Genre Taxonomy} 
+ An widely cited paper published in 2000 suggests several principles should be followed when design a music taxonomy \cite{pachet2000taxonomy}, they are:\\
+ 1. Objectivity: music's genre should be decided with respective to its traits which can differentiate it from its father and neighbors rather than the listeners' fillings.\\
+ 2. Independence: each leave genre can only have one father node. Situations such as Pop\textgreater Punk and Rock\textgreater Punk can't coexist.\\
+ 3. Similarity: the similarities between each related genres can be traced. For example, after defined genres objectively, we can find that both post rock and ambient are usually non-vocal.\\
+ 4. Consistency: the advent of new genre is compatible to the taxonomy, which means a new type of music can be assigned as a sub-genre of a existed father genre.\\
+A widely recognised music genre taxonomy is musicmap which provides the genealogy of music genres from 1870 to 2016. This taxonomy obeys the rules mentioned above. Genre tags in the database GTZAN are mutually independent, nine of them are father genres in musicmap and disco is a subgenre of R\&B which is also one of the father genres. However, some songs are repeated or mislabelled in this database\cite{sturm2013gtzan}. Another widely used dataset is ISMIR2004 which includes 6 genres: classical, electronic, jazz\_blues, metal\_punk, rock\_pop and world. These genres don't correspondent to the taxonomy and wikipedia's definition, because punk is a subgenre of rock. There's also repitition in dataset MagnaTagATune: both new age and ambient are treated as genres but the former is the subgenre of the latter.
+
+\bibliographystyle{apacite}
+\bibliography{references}
+\end{document}

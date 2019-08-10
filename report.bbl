@@ -1,0 +1,524 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Bahuleyan%
+}{%
+Bahuleyan%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+bahuleyan2018music}
+\APACinsertmetastar {%
+bahuleyan2018music}%
+\begin{APACrefauthors}%
+Bahuleyan, H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre classification using machine learning
+  techniques} {Music genre classification using machine learning
+  techniques}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1804.01149}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Bergstra%
+, Casagrande%
+, Erhan%
+, Eck%
+\BCBL {}\ \BBA {} K{\'e}gl%
+}{%
+Bergstra%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+bergstra2006aggregate}
+\APACinsertmetastar {%
+bergstra2006aggregate}%
+\begin{APACrefauthors}%
+Bergstra, J.%
+, Casagrande, N.%
+, Erhan, D.%
+, Eck, D.%
+\BCBL {}\ \BBA {} K{\'e}gl, B.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Aggregate features and a da b oost for music
+  classification} {Aggregate features and a da b oost for music
+  classification}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Machine learning}{65}{2-3}{473--484}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Y.~Costa%
+, Oliveira%
+, Koerich%
+\BCBL {}\ \BBA {} Gouyon%
+}{%
+Y.~Costa%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2013}}%
+}]{%
+costa2013music}
+\APACinsertmetastar {%
+costa2013music}%
+\begin{APACrefauthors}%
+Costa, Y.%
+, Oliveira, L.%
+, Koerich, A.%
+\BCBL {}\ \BBA {} Gouyon, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre recognition using gabor filters and lpq
+  texture descriptors} {Music genre recognition using gabor filters and lpq
+  texture descriptors}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Iberoamerican congress on pattern recognition}
+  {Iberoamerican congress on pattern recognition}\ (\BPGS\ 67--74).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Y\BPBI M.~Costa%
+, Oliveira%
+, Koerich%
+, Gouyon%
+\BCBL {}\ \BBA {} Martins%
+}{%
+Y\BPBI M.~Costa%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2012}}%
+}]{%
+costa2012music}
+\APACinsertmetastar {%
+costa2012music}%
+\begin{APACrefauthors}%
+Costa, Y\BPBI M.%
+, Oliveira, L.%
+, Koerich, A\BPBI L.%
+, Gouyon, F.%
+\BCBL {}\ \BBA {} Martins, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2012}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre classification using LBP textural features}
+  {Music genre classification using lbp textural features}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Signal Processing}{92}{11}{2723--2737}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Y\BPBI M.~Costa%
+, Oliveira%
+, Koericb%
+\BCBL {}\ \BBA {} Gouyon%
+}{%
+Y\BPBI M.~Costa%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2011}}%
+}]{%
+histogram}
+\APACinsertmetastar {%
+histogram}%
+\begin{APACrefauthors}%
+Costa, Y\BPBI M.%
+, Oliveira, L\BPBI S.%
+, Koericb, A\BPBI L.%
+\BCBL {}\ \BBA {} Gouyon, F.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2011}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre recognition using spectrograms} {Music genre
+  recognition using spectrograms}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2011 18th International Conference on Systems, Signals
+  and Image Processing} {2011 18th international conference on systems, signals
+  and image processing}\ (\BPGS\ 1--4).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Fu%
+, Lu%
+, Ting%
+\BCBL {}\ \BBA {} Zhang%
+}{%
+Fu%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+fu2010survey}
+\APACinsertmetastar {%
+fu2010survey}%
+\begin{APACrefauthors}%
+Fu, Z.%
+, Lu, G.%
+, Ting, K\BPBI M.%
+\BCBL {}\ \BBA {} Zhang, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A survey of audio-based music classification and
+  annotation} {A survey of audio-based music classification and
+  annotation}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE transactions on multimedia}{13}{2}{303--319}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Huang%
+, Lin%
+, Wu%
+\BCBL {}\ \BBA {} Li%
+}{%
+Huang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2014}}%
+}]{%
+huang2014music}
+\APACinsertmetastar {%
+huang2014music}%
+\begin{APACrefauthors}%
+Huang, Y\BHBI F.%
+, Lin, S\BHBI M.%
+, Wu, H\BHBI Y.%
+\BCBL {}\ \BBA {} Li, Y\BHBI S.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2014}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre classification based on local feature
+  selection using a self-adaptive harmony search algorithm} {Music genre
+  classification based on local feature selection using a self-adaptive harmony
+  search algorithm}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Data \& Knowledge Engineering}{92}{}{60--76}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+LeCun%
+, Bengio%
+\BCBL {}\ \BBA {} Hinton%
+}{%
+LeCun%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2015}}%
+}]{%
+deeplearning}
+\APACinsertmetastar {%
+deeplearning}%
+\begin{APACrefauthors}%
+LeCun, Y.%
+, Bengio, Y.%
+\BCBL {}\ \BBA {} Hinton, G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Deep learning} {Deep learning}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{nature}{521}{7553}{436}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Li%
+, Chan%
+\BCBL {}\ \BBA {} Chun%
+}{%
+Li%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2010}}%
+}]{%
+klc2}
+\APACinsertmetastar {%
+klc2}%
+\begin{APACrefauthors}%
+Li, T\BPBI L.%
+, Chan, A\BPBI B.%
+\BCBL {}\ \BBA {} Chun, A\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2010}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Automatic musical pattern feature extraction using
+  convolutional neural network} {Automatic musical pattern feature extraction
+  using convolutional neural network}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Genre}{10}{}{1x1}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Maddage%
+, Xu%
+\BCBL {}\ \BBA {} Wang%
+}{%
+Maddage%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2004}}%
+}]{%
+maddage2004singer}
+\APACinsertmetastar {%
+maddage2004singer}%
+\begin{APACrefauthors}%
+Maddage, N\BPBI C.%
+, Xu, C.%
+\BCBL {}\ \BBA {} Wang, Y.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2004}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Singer identification based on vocal and instrumental
+  models} {Singer identification based on vocal and instrumental
+  models}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 17th International Conference on
+  Pattern Recognition, 2004. ICPR 2004.} {Proceedings of the 17th international
+  conference on pattern recognition, 2004. icpr 2004.}\ (\BVOL~2, \BPGS\
+  375--378).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Murthy%
+\ \BBA {} Koolagudi%
+}{%
+Murthy%
+\ \BBA {} Koolagudi%
+}{%
+{\protect \APACyear {2018}}%
+}]{%
+review}
+\APACinsertmetastar {%
+review}%
+\begin{APACrefauthors}%
+Murthy, Y.%
+\BCBT {}\ \BBA {} Koolagudi, S\BPBI G.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Content-based music information retrieval (cb-mir) and
+  its applications toward the music industry: A review} {Content-based music
+  information retrieval (cb-mir) and its applications toward the music
+  industry: A review}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{ACM Computing Surveys (CSUR)}{51}{3}{45}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Nanni%
+, Costa%
+, Lumini%
+, Kim%
+\BCBL {}\ \BBA {} Baek%
+}{%
+Nanni%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2016}}%
+}]{%
+nanni2016combining}
+\APACinsertmetastar {%
+nanni2016combining}%
+\begin{APACrefauthors}%
+Nanni, L.%
+, Costa, Y\BPBI M.%
+, Lumini, A.%
+, Kim, M\BPBI Y.%
+\BCBL {}\ \BBA {} Baek, S\BPBI R.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2016}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Combining visual and acoustic features for music genre
+  classification} {Combining visual and acoustic features for music genre
+  classification}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{Expert Systems with Applications}{45}{}{108--117}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Pachet%
+\ \BBA {} Cazaly%
+}{%
+Pachet%
+\ \BBA {} Cazaly%
+}{%
+{\protect \APACyear {2000}}%
+}]{%
+pachet2000taxonomy}
+\APACinsertmetastar {%
+pachet2000taxonomy}%
+\begin{APACrefauthors}%
+Pachet, F.%
+\BCBT {}\ \BBA {} Cazaly, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2000}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {A taxonomy of musical genres} {A taxonomy of musical
+  genres}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Content-Based Multimedia Information Access-Volume 2}
+  {Content-based multimedia information access-volume 2}\ (\BPGS\ 1238--1245).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Piczak%
+}{%
+Piczak%
+}{%
+{\protect \APACyear {2015}}%
+}]{%
+piczak2015environmental}
+\APACinsertmetastar {%
+piczak2015environmental}%
+\begin{APACrefauthors}%
+Piczak, K\BPBI J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2015}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Environmental sound classification with convolutional
+  neural networks} {Environmental sound classification with convolutional
+  neural networks}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {2015 IEEE 25th International Workshop on Machine
+  Learning for Signal Processing (MLSP)} {2015 ieee 25th international workshop
+  on machine learning for signal processing (mlsp)}\ (\BPGS\ 1--6).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Scaringella%
+, Zoia%
+\BCBL {}\ \BBA {} Mlynek%
+}{%
+Scaringella%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2006}}%
+}]{%
+featuresummary}
+\APACinsertmetastar {%
+featuresummary}%
+\begin{APACrefauthors}%
+Scaringella, N.%
+, Zoia, G.%
+\BCBL {}\ \BBA {} Mlynek, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Ref-196 Automatic genre classification of music content:
+  a survey} {Ref-196 automatic genre classification of music content: a
+  survey}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Signal Processing Magazine}{23}{2}{133--141}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Sturm%
+}{%
+Sturm%
+}{%
+{\protect \APACyear {2013}}%
+}]{%
+sturm2013gtzan}
+\APACinsertmetastar {%
+sturm2013gtzan}%
+\begin{APACrefauthors}%
+Sturm, B\BPBI L.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2013}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {The GTZAN dataset: Its contents, its faults, their
+  effects on evaluation, and its future use} {The gtzan dataset: Its contents,
+  its faults, their effects on evaluation, and its future use}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{arXiv preprint arXiv:1306.1461}{}{}{}.
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tang%
+, Chui%
+, Yu%
+, Zeng%
+\BCBL {}\ \BBA {} Wong%
+}{%
+Tang%
+\ \protect \BOthers {.}}{%
+{\protect \APACyear {2018}}%
+}]{%
+tang2018music}
+\APACinsertmetastar {%
+tang2018music}%
+\begin{APACrefauthors}%
+Tang, C\BPBI P.%
+, Chui, K\BPBI L.%
+, Yu, Y\BPBI K.%
+, Zeng, Z.%
+\BCBL {}\ \BBA {} Wong, K\BPBI H.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2018}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Music genre classification using a hierarchical long
+  short term memory (LSTM) model} {Music genre classification using a
+  hierarchical long short term memory (lstm) model}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Third International Workshop on Pattern Recognition}
+  {Third international workshop on pattern recognition}\ (\BVOL\ 10828,
+  \BPG~108281B).
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Tzanetakis%
+\ \BBA {} Cook%
+}{%
+Tzanetakis%
+\ \BBA {} Cook%
+}{%
+{\protect \APACyear {2002}}%
+}]{%
+tzanetakis2002musical}
+\APACinsertmetastar {%
+tzanetakis2002musical}%
+\begin{APACrefauthors}%
+Tzanetakis, G.%
+\BCBT {}\ \BBA {} Cook, P.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2002}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Musical genre classification of audio signals} {Musical
+  genre classification of audio signals}.{\BBCQ}
+\newblock
+\APACjournalVolNumPages{IEEE Transactions on speech and audio
+  processing}{10}{5}{293--302}.
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

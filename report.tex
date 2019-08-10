@@ -1,0 +1,23 @@
+\documentclass[a4paper, 11pt]{book}
+\usepackage[margin=1.2in]{geometry}
+\usepackage{apacite}
+\usepackage{graphicx}
+\usepackage[capposition=top]{floatrow}
+\usepackage{subcaption}
+\usepackage{amsmath,bm}
+\usepackage{booktabs}
+\usepackage[nottoc,notlot,notlof]{tocbibind}
+\begin{document}
+\tableofcontents
+\listoffigures
+\listoftables
+\mainmatter
+\input{sections/introduction.tex}
+\input{sections/background.tex}
+\input{sections/modeldesign.tex}
+\input{sections/experiment.tex}
+\input{sections/conclusion.tex}
+
+\bibliographystyle{apacite}
+\bibliography{references}
+\end{document}
